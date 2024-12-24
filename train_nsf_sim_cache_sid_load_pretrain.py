@@ -575,9 +575,9 @@ def train_and_evaluate(
             )
 
     if rank == 0:
-        logger.info("====> Epoch: {} {}".format(epoch, epoch_recorder.record()))
+        print("====> Epoch: {} {}".format(epoch, epoch_recorder.record()))
     if epoch >= hps.total_epoch and rank == 0:
-        logger.info("Training is done. The program is closed.")
+        print("Training is done. The program is closed.")
 
         if hasattr(net_g, "module"):
             ckpt = net_g.module.state_dict()
