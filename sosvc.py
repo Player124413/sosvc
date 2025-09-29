@@ -1965,7 +1965,7 @@ with gr.Blocks(title="varvc") as app:
         #     gr.Markdown(value=i18n("xxxxx"))
 
     if config.iscolab:
-        app.queue(concurrency_count=511, max_size=1022).launch(share=True)
+        app.queue(concurrency_count=511, max_size=1022).launch(share=False)
     else:
         app.queue(concurrency_count=511, max_size=1022).launch(
             server_name="0.0.0.0",
